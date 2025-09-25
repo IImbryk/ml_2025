@@ -1,8 +1,8 @@
-Пояснение к домашней работе: идем в функцию ```check_with_ai```
+Пояснение к домашней работе: идем в функцию ```bot.py/check_with_ai```
 - меняем переменную ```prompt```
 - меняем параметры (как минимум temperature), модель (см. на [сайте](https://openrouter.ai) c пометкой free)
 
-```
+```python
 openrouter.chat.completions.create(
             model="anthropic/claude-3.5-sonnet",
             messages=[
@@ -16,7 +16,7 @@ openrouter.chat.completions.create(
 
 
 Есть и другие параметры, подробнее в [документации](https://openrouter.ai/docs), например
-```
+```python
     top_p=1.0,                         # Nucleus sampling (0.0-1.0)
     frequency_penalty=0.0,              # Штраф за повторы (-2.0 до 2.0)
     presence_penalty=0.0,               # Штраф за упоминания (-2.0 до 2.0)
@@ -26,7 +26,7 @@ openrouter.chat.completions.create(
 Запуск бота
 
 1. Проверьте python
-```
+```bash
 # Откройте cmd (Win+R → cmd)
 python --version
 # или
@@ -71,7 +71,7 @@ OPENROUTER_API_KEY=твой_ключ_openrouter
 
 
 Для  Windows (Откройте командную строку (Win+R → cmd))
-```
+```bash
 # Перейдите в папку проекта
 cd C:\путь\к\telegram_lab_bot
 
@@ -87,7 +87,7 @@ venv\Scripts\activate
 
 Для Linux все так же, кроме активации окружения:
 
-```
+```bash
 source venv/bin/activate
 
 ```
@@ -95,7 +95,7 @@ source venv/bin/activate
 5. Установите библиотеки
 
 
-```
+```bash
 # Обновите pip
 python -m pip install --upgrade pip
 
@@ -105,7 +105,7 @@ pip install -r requirements.txt
 
 6. Запуск бота
 
-```
+```bash
 python bot.py
 ```
 
