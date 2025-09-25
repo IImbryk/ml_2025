@@ -1,0 +1,9 @@
+aiogram
+openai
+python-dotenv
+aiofiles
+python-docx
+PyPDF2
+requests
+docx2txt
+httpx==0.27.2
