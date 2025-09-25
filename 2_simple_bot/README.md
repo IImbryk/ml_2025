@@ -1,3 +1,29 @@
+Пояснение к домашней работе: идем в функцию ```check_with_ai```
+- меняем переменную ```prompt```
+- меняем параметры (как минимум temperature), модель (см. на [сайте](https://openrouter.ai) c пометкой free)
+
+```
+openrouter.chat.completions.create(
+            model="anthropic/claude-3.5-sonnet",
+            messages=[
+                {"role": "user", "content": prompt}
+            ],
+            max_tokens=1500,
+            temperature=0.3
+        )
+
+```
+
+
+Есть и другие параметры, подробнее в [документации](https://openrouter.ai/docs), например
+```
+    top_p=1.0,                         # Nucleus sampling (0.0-1.0)
+    frequency_penalty=0.0,              # Штраф за повторы (-2.0 до 2.0)
+    presence_penalty=0.0,               # Штраф за упоминания (-2.0 до 2.0)
+```
+
+
+Запуск бота
 
 1. Проверьте python
 ```
@@ -82,3 +108,4 @@ pip install -r requirements.txt
 ```
 python bot.py
 ```
+
