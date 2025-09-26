@@ -5,7 +5,6 @@
 import asyncio
 import os
 import tempfile
-import aiofiles
 from pathlib import Path
 
 from aiogram import Bot, Dispatcher, F
@@ -258,7 +257,7 @@ async def check_with_ai(content: str) -> str:
     
     try:
         response = openrouter.chat.completions.create(
-            model="anthropic/claude-3.5-sonnet",
+            model="qwen/qwen3-235b-a22b:free",
             messages=[
                 {"role": "user", "content": prompt}
             ],
@@ -274,7 +273,7 @@ async def check_with_ai(content: str) -> str:
 
 # Запуск бота
 async def main():
-    print("🤖 Запускаю простой бот для проверки лабораторных работ...")
+    print("🤖 Запускаю бот для проверки лабораторных работ...")
     print("📄 Поддерживаемые форматы: PDF, DOCX, TXT")
     print("🤖 ИИ модель: Claude 3.5 Sonnet")
     print("⚡ Просто отправьте файл для проверки!")
