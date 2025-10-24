@@ -5,7 +5,7 @@
 
 ### Датасет
 
-В этом домашнем задании мы будем использовать датасет Bank Marketing. Скачать его можно [здесь](https://archive.ics.uci.edu/static/public/222/bank+marketing.zip).
+В этом домашнем задании мы будем использовать датасет Bank Marketing. Скачать его можно [здесь](https://archive.ics.uci.edu/dataset/222/bank+marketing).
 
 Или вы можете скачать его с помощью `wget`:
 
