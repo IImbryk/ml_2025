@@ -109,33 +109,3 @@ df.columns = df.columns.str.lower().str.replace(' ', '_')
 * `attendance_rate`
 * `distance_to_school`
 * `teacher_quality`
-
-
-## Вопрос 6
-
-Теперь обучим модель XGBoost! В этом задании мы будем настраивать параметр `eta`:
-
-* Установите XGBoost.
-* Создайте DMatrix для train и validation.
-* Создайте watchlist.
-* Обучите модель с этими параметрами в течение 100 раундов:
-
-```python
-xgb_params = {
-    'eta': 0.3, 
-    'max_depth': 6,
-    'min_child_weight': 1,
-    
-    'objective': 'reg:squarederror',
-    'nthread': 8,
-    
-    'seed': 1,
-    'verbosity': 1,
-}
-```
-Теперь измените `eta` с 0.3 на 0.1.
-
-Какое значение `eta` приводит к лучшему значению RMSE на валидационном наборе данных?
-* 0.3
-* 0.1
-* Both give equal value
